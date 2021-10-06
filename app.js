@@ -22,10 +22,8 @@ app.post("/api/books", (req, res) => {
   const book = { id: uuidv4(), ...req.body };
 
   books = [book, ...books];
-  res.status(201).json(book)
+  res.status(201).json(book);
 
-
-  // book.hasOwnProperty('author') ?
   //    :
   //   res.status(500).json({ error: "An error has occured. Please ensure your book includes an author property in your json body. " });
 });
