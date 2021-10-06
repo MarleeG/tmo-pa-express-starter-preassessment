@@ -17,10 +17,6 @@ app.get("/api/books", (req, res) => {
   const sortedBooks = books.sort((a, b) => a.title.toLowerCase().localeCompare(b.title.toLowerCase()));
 
   res.status(200).json({ books: sortedBooks })
-
-  // books.length > 0 ?
-  //   res.status(200).json({ books: sortedBooks }) :
-  //   res.status(200).json({ "message": "There aren't any books available in your library at this time." })
 });
 
 app.post("/api/books", (req, res) => {
@@ -28,9 +24,6 @@ app.post("/api/books", (req, res) => {
 
   books = [book, ...books];
   res.status(201).json(book);
-
-  //    :
-  //   res.status(500).json({ error: "An error has occured. Please ensure your book includes an author property in your json body. " });
 });
 
 app.delete("/api/books", (req, res) => {
