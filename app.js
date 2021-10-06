@@ -11,11 +11,13 @@ app.get("/health", (req, res) => {
 });
 
 app.get("/api/books", (req, res) => {
-  const sortedBooks = books.sort((a, b) => a.title.toLowerCase().localeCompare(b.title.toLowerCase()))
+  const sortedBooks = books.sort((a, b) => a.title.toLowerCase().localeCompare(b.title.toLowerCase()));
 
-  books.length > 0 ?
-    res.status(200).json({ books: sortedBooks }) :
-    res.status(200).json({ "message": "There aren't any books available in your library at this time." })
+  res.status(200).json({ books: sortedBooks })
+
+  // books.length > 0 ?
+  //   res.status(200).json({ books: sortedBooks }) :
+  //   res.status(200).json({ "message": "There aren't any books available in your library at this time." })
 });
 
 app.post("/api/books", (req, res) => {

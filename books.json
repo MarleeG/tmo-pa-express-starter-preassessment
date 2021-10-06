@@ -1,1 +1,20 @@
-[]
+[
+    {
+        "id": 2,
+        "author": "Philip K. Dick",
+        "title": "Do Androids Dream of Electric Sheep?",
+        "yearPublished": 1968
+    },
+    {
+        "id": 3,
+        "author": "William Gibson",
+        "title": "Neuromancer",
+        "yearPublished": 1984
+    },
+    {
+        "id": 1,
+        "author": "Douglas Adams",
+        "title": "The Hitchhiker's Guide to the Galaxy",
+        "yearPublished": 1979
+    }
+]
