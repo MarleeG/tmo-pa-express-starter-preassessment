@@ -1,6 +1,5 @@
 const express = require("express");
 const app = express();
-const { v4: uuidv4 } = require('uuid');
 let books = require("./books.json");
 
 app.use(express.json());
@@ -25,7 +24,7 @@ app.get("/api/books", (req, res) => {
 });
 
 app.post("/api/books", (req, res) => {
-  const book = { id: uuidv4(), ...req.body };
+  const book = { id: Date.now(), ...req.body };
 
   books = [book, ...books];
   res.status(201).json(book);
