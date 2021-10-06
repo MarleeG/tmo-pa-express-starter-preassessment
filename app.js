@@ -6,6 +6,10 @@ let books = require("./books.json");
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+app.get("/", (req,res) => {
+  res.sendFile(__dirname + "/views/index.html")
+})
+
 app.get("/health", (req, res) => {
   res.status(200).send("Don't panic.");
 });
